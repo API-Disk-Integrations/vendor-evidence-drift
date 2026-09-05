@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling==1.32.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vendor-evidence-drift"
+version = "1.0.0"
+description = "Monitor vendor security, privacy, subprocessor, certification and SLA evidence, and map changes to controls and risk."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "API Disk Integrations" }]
+keywords = ["api", "sdk", "vendor-evidence-drift"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[tool.hatch.build]
+ignore-vcs = true
+
+[project.urls]
+Homepage = "https://vendorevidence-api.com/"
+Documentation = "https://vendorevidence-api.com/#docs"
+Pricing = "https://vendorevidence-api.com/#pricing"
+Privacy = "https://vendorevidence-api.com/privacy"
+Terms = "https://vendorevidence-api.com/terms"
+Source = "https://github.com/API-Disk-Integrations/vendor-evidence-drift"
+Issues = "https://github.com/API-Disk-Integrations/vendor-evidence-drift/issues"
+Changelog = "https://github.com/API-Disk-Integrations/vendor-evidence-drift/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vendor_evidence_drift"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/LICENSE",
+  "/README.md",
+  "/pyproject.toml",
+  "/src/vendor_evidence_drift/__init__.py",
+]
